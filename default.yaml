@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 # 要比共享目录的同名文件的 config_version 大才可以生效
-config_version: "2024-02-05"
+config_version: '2024-02-05'
 
 # 方案列表
 schema_list:
@@ -33,7 +33,7 @@ switcher:
     - search_single_char
   fold_options: true # 呼出时是否折叠，多方案时建议折叠 true ，一个方案建议展开 false
   abbreviate_options: true # 折叠时是否缩写选项
-  option_list_separator: " / " # 折叠时的选项分隔符
+  option_list_separator: ' / ' # 折叠时的选项分隔符
 
 # 中西文切换
 #
@@ -70,88 +70,88 @@ ascii_composer:
 #              '`'（反引号）没有改成 '·'（间隔号）。
 punctuator:
   full_shape:
-    " ": { commit: "　" }
-    ",": { commit: ， }
-    ".": { commit: 。 }
-    "<": [《, 〈, «, ‹]
-    ">": [》, 〉, », ›]
-    "/": [／, ÷]
-    "?": { commit: ？ }
-    ";": { commit: ； }
-    ":": { commit: ： }
-    "'": { pair: ["‘", "’"] }
-    '"': { pair: ["“", "”"] }
+    ' ': { commit: '　' }
+    ',': { commit: ， }
+    '.': { commit: 。 }
+    '<': [《, 〈, «, ‹]
+    '>': [》, 〉, », ›]
+    '/': [／, ÷]
+    '?': { commit: ？ }
+    ';': { commit: ； }
+    ':': { commit: ： }
+    "'": { pair: ['‘', '’'] }
+    '"': { pair: ['“', '”'] }
     '\': [、, ＼]
-    "|": [·, ｜, "§", "¦"]
-    "`": ｀
-    "~": ～
-    "!": { commit: ！ }
-    "@": [＠, ☯]
-    "#": [＃, ⌘]
-    "%": [％, "°", "℃"]
-    "$": [￥, "$", "€", "£", "¥", "¢", "¤"]
-    "^": { commit: …… }
-    "&": ＆
-    "*": [＊, ·, ・, ×, ※, ❂]
-    "(": （
-    ")": ）
-    "-": －
-    "_": ——
-    "+": ＋
-    "=": ＝
-    "[": [「, 【, 〔, ［]
-    "]": [」, 】, 〕, ］]
-    "{": [『, 〖, ｛]
-    "}": [』, 〗, ｝]
+    '|': [·, ｜, '§', '¦']
+    '`': ｀
+    '~': ～
+    '!': { commit: ！ }
+    '@': [＠, ☯]
+    '#': [＃, ⌘]
+    '%': [％, '°', '℃']
+    '$': [￥, '$', '€', '£', '¥', '¢', '¤']
+    '^': { commit: …… }
+    '&': ＆
+    '*': [＊, ·, ・, ×, ※, ❂]
+    '(': （
+    ')': ）
+    '-': －
+    '_': ——
+    '+': ＋
+    '=': ＝
+    '[': [「, 【, 〔, ［]
+    ']': [」, 】, 〕, ］]
+    '{': [『, 〖, ｛]
+    '}': [』, 〗, ｝]
   half_shape:
-    ",": "，"
-    ".": "。"
-    "<": "《"
-    ">": "》"
-    "/": "、"
-    "?": "？"
-    ";": "；"
-    ":": "："
-    "'": { pair: ["‘", "’"] }
-    '"': { pair: ["“", "”"] }
-    '\': "、"
-    "|": "｜"
-    "`": "`"
-    "~": "～"
-    "!": "！"
-    "@": "@"
-    "#": "#"
-    "%": "%"
-    "$": "¥"
-    "^": "……"
-    "&": "&"
-    "*": "*"
-    "(": "（"
-    ")": "）"
-    "-": "-"
-    "_": ——
-    "+": "+"
-    "=": "="
-    "[": "【"
-    "]": "】"
-    "{": "「"
-    "}": "」"
+    ',': '，'
+    '.': '。'
+    '<': '《'
+    '>': '》'
+    '/': '、'
+    '?': '？'
+    ';': '；'
+    ':': '：'
+    "'": { pair: ['‘', '’'] }
+    '"': { pair: ['“', '”'] }
+    '\': '、'
+    '|': '｜'
+    '`': '`'
+    '~': '～'
+    '!': '！'
+    '@': '@'
+    '#': '#'
+    '%': '%'
+    '$': '¥'
+    '^': '……'
+    '&': '&'
+    '*': '*'
+    '(': '（'
+    ')': '）'
+    '-': '-'
+    '_': ——
+    '+': '+'
+    '=': '='
+    '[': '【'
+    ']': '】'
+    '{': '「'
+    '}': '」'
 
 # 处理符合特定规则的输入码，如网址、反查
 # 此处配置较为通用的选项，各方案中另增加了和方案功能绑定的 patterns。
 recognizer:
   patterns:
-    email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$" # email @ 之后不上屏
-    url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$" # URL
-    underscore: "^[A-Za-z]+_.*" # 下划线不上屏
+    email: '^[A-Za-z][-_.0-9A-Za-z]*@.*$' # email @ 之后不上屏
+    url: '^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$' # URL
+    underscore: '^[A-Za-z]+_.*' # 下划线不上屏
     # url_2: "^[A-Za-z]+[.].*"   # 句号不上屏，支持 google.com abc.txt 等网址或文件名，使用句号翻页时需要注释掉
     # colon: "^[A-Za-z]+:.*"     # 冒号不上屏
 
 # 快捷键
 key_binder:
   # Lua 配置: 以词定字（上屏当前词句的第一个或最后一个字），和中括号翻页有冲突
-  select_first_character: "bracketleft" # 左中括号 [
-  select_last_character: "bracketright" # 右中括号 ]
+  select_first_character: 'bracketleft' # 左中括号 [
+  select_last_character: 'bracketright' # 右中括号 ]
 
   bindings:
     # Tab / Shift+Tab 切换光标至下/上一个拼音
@@ -166,7 +166,7 @@ key_binder:
     # - { when: composing, accept: Alt+Right, send: Shift+Right }
 
     # 翻页 - =
-    # - { when: has_menu, accept: minus, send: Page_Up }
+    # - { when: has_menu, accept: minus, send: Page_Up }  # 上一页设置为 paging 时会导致直接上屏并输出减号
     # - { when: has_menu, accept: equal, send: Page_Down }
 
     # 翻页 , .
@@ -174,7 +174,7 @@ key_binder:
     - { when: paging, accept: comma, send: Page_Up }
     - { when: has_menu, accept: period, send: Page_Down }
 
-    # 翻页 [ ]
+    # 翻页 [ ]  ⚠️ 开启时请修改上面以词定字的快捷键
     # - { when: paging, accept: bracketleft, send: Page_Up }
     # - { when: has_menu, accept: bracketright, send: Page_Down }
 
@@ -226,6 +226,11 @@ key_binder:
     - { accept: KP_8, send: 8, when: composing }
     - { accept: KP_9, send: 9, when: composing }
     - { accept: KP_Decimal, send: period, when: composing }
+    # 将小键盘 + - * / 映射到主键盘，使计算器 如 1+2-3*4 可使用小键盘输入
+    - { accept: KP_Multiply, send: asterisk, when: composing }
+    - { accept: KP_Add, send: plus, when: composing }
+    - { accept: KP_Subtract, send: minus, when: composing }
+    - { accept: KP_Divide, send: slash, when: composing }
 # 按键速查
 # https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md
 # （没有 Command 键，不支持）

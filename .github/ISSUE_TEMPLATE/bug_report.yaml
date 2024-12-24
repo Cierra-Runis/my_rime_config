@@ -1,8 +1,7 @@
 name: Bug 报告
 description: 我遇到了一个 bug 或是非预期行为
 title: '[Bug]: '
-labels:
-  - bug
+
 body:
   - type: input
     id: input
@@ -45,6 +44,24 @@ body:
       placeholder: Squirrel 1.0.2 / Weasel 0.16.1
     validations:
       required: true
+  - type: dropdown
+    id: schema_type
+    attributes:
+      label: 输入方案
+      description: 请选择你在使用的，或者此 issue 涉及的主要输入方案
+      options:
+        - '-- 请选择 --'
+        - 雾凇拼音 全拼 rime_ice
+        - 小鹤双拼 double_pinyin_flypy
+        - 智能 ABC double_pinyin_abc
+        - 微软双拼 double_pinyin_mspy
+        - 搜狗双拼 double_pinyin_sougou
+        - 紫光双拼 double_pinyin_ziguang
+        - 自然码 double_pinyin
+        - 仓·九宫格 t9
+        - '-- 其他（在补充信息处说明）--'
+    validations:
+      required: true
   - type: textarea
     id: step_to_reproduce
     attributes:
@@ -66,11 +83,10 @@ body:
       label: 自定义配置
       description: 如果你对雾凇进行了修改或者打了补丁，请在此处提供你的自定义配置
       placeholder: |
-        完整配置文件请压缩上传。
-        配置片段请包裹在 Markdown 代码块中。即用三个反引号（```）包裹，如
-        ```yaml
-        # 你的配置片段
-        ```
+        将自定义文件打包为 zip，拖放到此处。
+
+        配置片段放在 Markdown 的代码块中。
+
 
 
 
