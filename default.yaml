@@ -10,6 +10,12 @@ schema_list:
   # 除了 t9，它依赖于 rime_ice，用九宫格别删 rime_ice.schema.yaml
   - schema: rime_ice # 雾凇拼音（全拼）
   - schema: t9 # 九宫格（仓输入法）
+  # - schema: double_pinyin          # 自然码双拼
+  # - schema: double_pinyin_abc      # 智能 ABC 双拼
+  # - schema: double_pinyin_mspy     # 微软双拼
+  # - schema: double_pinyin_sogou    # 搜狗双拼
+  # - schema: double_pinyin_flypy    # 小鹤双拼
+  # - schema: double_pinyin_ziguang  # 紫光双拼
 
 # 菜单
 menu:
@@ -37,8 +43,11 @@ switcher:
 
 # 中西文切换
 #
-# 【good_old_caps_lock】 CapsLock 切换到大写或切换中英。
-# （macOS 偏好设置的优先级更高，如果勾选【使用大写锁定键切换“ABC”输入法】则始终会切换输入法）
+# good_old_caps_lock:
+# true   切换大写
+
+# false  切换中英
+# macOS 偏好设置的优先级更高，如果勾选【使用大写锁定键切换“ABC”输入法】则始终会切换输入法。
 #
 # 切换中英：
 # 不同的选项表示：打字打到一半时按下了 CapsLock、Shift、Control 后：
@@ -171,7 +180,6 @@ key_binder:
     # - { when: has_menu, accept: equal, send: Page_Down }
 
     # 翻页 , .
-    # 需要额外注释掉方案中 recognizer/patterns 下的 url_2 选项（这个会覆盖掉句号的行为）
     - { when: paging, accept: comma, send: Page_Up }
     - { when: has_menu, accept: period, send: Page_Down }
 
