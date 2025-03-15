@@ -25,3 +25,4 @@ patch:
   'style/horizontal': true
   'style/label_font_face': 'Cascadia Code'
   'style/layout/corner_radius': 12
+  'style/inline_preedit': true
