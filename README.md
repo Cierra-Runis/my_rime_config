@@ -177,34 +177,10 @@ git clone https://github.com/rime/plum.git plum
 # 卸载 plum 只需要删除 ~/plum 文件夹即可
 ```
 
-更新 plum
-
 使用 plum
 
 ```bash
 cd ~/plum
-bash rime-install plum
-```
-
-使用 plum 安装「雾凇拼音」方案的韵书（recipe）
-
-```bash
-cd ~/plum
-bash rime-install iDvel/rime-ice:others/recipes/full
-```
-
-指定 RIME 前端为 fcitx5-rime
-
-```bash
-cd ~/plum
-rime_frontend=fcitx5-rime bash rime-install iDvel/rime-ice:others/recipes/full
-```
-
-使用 plum 更新「雾凇拼音」的词库文件
-
-```sh
-cd ~/plum
-bash rime-install iDvel/rime-ice:others/recipes/all_dicts
 bash rime-install <recipe_name>
 ```
 
