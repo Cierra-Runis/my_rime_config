@@ -165,8 +165,6 @@ git pull
 
 ---
 
-安装 plum（仅需要执行一次）
-
 安装 plum
 
 ```bash
