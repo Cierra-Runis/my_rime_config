@@ -16,13 +16,15 @@ patch:
     hilited_candidate_text_color: 0x08F
     name: Cierra_Runis
     text_color: 0xF0F0F0
-  'style/color_scheme': Cierra_Runis
-  'style/comment_font_face': 'Cascadia Code'
-  'style/font_face': 'Segoe UI Emoji:20:39, Noto Color Emoji SVG:80, MiSans:medium'
-  'style/font_point': 12
-  'style/label_font_point': 12 # 标签字体字号，不设定 fallback 到 font_point
-  'style/comment_font_point': 12 # 注释字体字号，不设定 fallback 到 font_point
-  'style/horizontal': true
-  'style/label_font_face': 'Cascadia Code'
-  'style/layout/corner_radius': 12
-  'style/inline_preedit': true
+  style/+:
+    comment_font_face: 'Cascadia Code'
+    color_scheme: Cierra_Runis
+    font_face: 'Segoe UI Emoji:20:39, Noto Color Emoji SVG:80, MiSans:medium'
+    font_point: 12
+    label_font_point: 12 # 标签字体字号，不设定 fallback 到 font_point
+    comment_font_point: 12 # 注释字体字号，不设定 fallback 到 font_point
+    horizontal: true
+    label_font_face: 'Cascadia Code'
+    layout/corner_radius: 12
+    inline_preedit: false # 行内显示预编辑区：true；false
+    preedit_type: composition # 预编辑区内容：composition（编码）； preview（选中的候选）；
