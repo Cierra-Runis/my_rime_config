@@ -26,5 +26,5 @@ patch:
     horizontal: true
     label_font_face: 'Cascadia Code'
     layout/corner_radius: 12
-    inline_preedit: false # 行内显示预编辑区：true；false
+    inline_preedit: true # 行内显示预编辑区：true；false
     preedit_type: composition # 预编辑区内容：composition（编码）； preview（选中的候选）；
